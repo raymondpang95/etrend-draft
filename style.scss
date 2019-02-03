@@ -1,0 +1,18 @@
+@import './src/module/stooges-variables.scss';
+@import './src/scss/project-variables.scss';
+@import './src/module/stooges-mixin.scss';
+@import './src/scss/project-mixin.scss';
+@import './src/module/stooges-basscss.scss';
+@import './src/scss/project-basscss.scss';
+@import './src/scss/fontFamily.scss';
+
+.box{
+    height:200px;
+    background: red;
+}
+
+
+
+.mark{
+    color:$color-main;
+}
