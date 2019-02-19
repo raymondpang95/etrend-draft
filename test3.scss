@@ -1,0 +1,360 @@
+@import './src/module/stooges-variables.scss';
+@import './src/scss/project-variables.scss';
+@import './src/module/stooges-mixin.scss';
+@import './src/scss/project-mixin.scss';
+@import './src/module/stooges-basscss.scss';
+@import './src/scss/project-basscss.scss';
+@import './src/scss/fontFamily.scss';
+
+@media #{$breakpoint-up-lg} {
+	.outsideCover {
+		$sideWidth: 327px;
+		padding-top: 150px;
+		padding-left: $sideWidth;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.header {
+			width: 100%;
+			height: 150px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: blue;
+		}
+		.sideLeftBar {
+			position: fixed;
+			width: $sideWidth;
+			height: calc(100% - 150px);
+			top: 150px;
+			left: 0;
+			overflow-y: scroll;
+			background-color: #1e1d1d;
+			.navPageLink {
+				position: relative;
+				height: 100%;
+				nav {
+					margin-top: 60px;
+					color: #ffffff;
+					ul {
+						padding: 0;
+						li {
+							list-style: none;
+							margin-top: 10px;
+							width: 100%;
+							border-top: 1px solid #313131;
+
+							.link {
+								display: block;
+								height: 29px;
+								line-height: 29px;
+								font-size: 12px;
+								text-transform: uppercase;
+								opacity: 0.8;
+								padding: 0 0 0 5%;
+								&.active {
+									background-color: rgb(89, 88, 88);
+								}
+							}
+							.sublink {
+								margin: 14px 0 25px 0;
+								width: 100%;
+								display: none;
+								background-color: rgb(89, 88, 88);
+								&.show {
+									display: block;
+									background-color: #1e1d1d;
+								}
+								a {
+									text-decoration: none;
+									outline: none;
+									cursor: pointer;
+									line-height: 20px;
+									height: 20px;
+									padding: 0 0 0 31px;
+									margin: 0 0 7px;
+									font-size: 11px;
+									color: #ffffff;
+									display: block;
+									&:hover {
+										background-color: rgb(89, 88, 88);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sideRightGalleryImage {
+			width: 100%;
+			height: 100%;
+			.galleryContent {
+				position: relative;
+				width: 100%;
+				img {
+					width: 100%;
+					display: block;
+				}
+				.information {
+					background: rgba(0, 0, 0, 0.8);
+					opacity: 0;
+					position: absolute;
+					top: 10px;
+					bottom: 10px;
+					left: 10px;
+					right: 10px;
+					overflow-y: scroll;
+					padding: 10px;
+					transition: 0.5 ease-in-out;
+					&:hover {
+						opacity: 1;
+					}
+					.title {
+						color: #ffffff;
+						text-decoration: underline;
+					}
+					.description {
+						line-height: 1.5;
+						font-size: 12px;
+						margin-top: 10px;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media #{$breakpoint-only-md} {
+	.outsideCover {
+		$sideWidth: 242px;
+		padding-top: 150px;
+		padding-left: $sideWidth;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.header {
+			width: 100%;
+			height: 150px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: blue;
+		}
+		.sideLeftBar {
+			position: fixed;
+			width: $sideWidth;
+			height: calc(100% - 150px);
+			top: 150px;
+			left: 0;
+			overflow-y: scroll;
+			background-color: #1e1d1d;
+			.navPageLink {
+				position: relative;
+				height: 100%;
+				nav {
+					margin-top: 60px;
+					color: #ffffff;
+					ul {
+						padding: 0;
+						li {
+							list-style: none;
+							margin-top: 10px;
+							width: 100%;
+							border-top: 1px solid #313131;
+							.link {
+								display: block;
+								height: 29px;
+								line-height: 29px;
+								font-size: 12px;
+								text-transform: uppercase;
+								opacity: 0.8;
+								padding: 0 0 0 5%;
+								&.active {
+									background-color: rgb(89, 88, 88);
+								}
+							}
+							.sublink {
+								margin: 14px 0 25px 0;
+								width: 100%;
+								display: none;
+								background-color: rgb(89, 88, 88);
+								&.show {
+									display: block;
+									background-color: #1e1d1d;
+								}
+								a {
+									text-decoration: none;
+									outline: none;
+									cursor: pointer;
+									line-height: 20px;
+									height: 20px;
+									padding: 0 0 0 31px;
+									margin: 0 0 7px;
+									font-size: 11px;
+									color: #ffffff;
+									display: block;
+									&:hover {
+										background-color: rgb(89, 88, 88);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sideRightGalleryImage {
+			width: 100%;
+			height: 100%;
+			.galleryContent {
+				position: relative;
+				width: 100%;
+				img {
+					width: 100%;
+					display: block;
+				}
+				.information {
+					background: rgba(0, 0, 0, 0.8);
+					opacity: 0;
+					position: absolute;
+					top: 10px;
+					bottom: 10px;
+					left: 10px;
+					right: 10px;
+					padding: 10px;
+					transition: 0.5 ease-in-out;
+					overflow-y: scroll;
+					&:hover {
+						opacity: 1;
+					}
+					.title {
+						color: #ffffff;
+						text-decoration: underline;
+					}
+					.description {
+						line-height: 1.5;
+						font-size: 12px;
+						margin-top: 10px;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+@media #{$breakpoint-down-sm} {
+	.outsideCover {
+		$sideWidth: 100%;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		.header {
+			width: 100%;
+			height: 150px;
+			position: relative;
+			background-color: blue;
+		}
+
+		.sideLeftBar {
+			position: relative;
+			width: $sideWidth;
+			height: auto;
+			overflow-y: scroll;
+			background-color: #1e1d1d;
+			.navPageLink {
+				position: relative;
+				height: 100%;
+				nav {
+					color: #ffffff;
+					ul {
+						padding: 0;
+						li {
+							list-style: none;
+							margin-top: 4px;
+							width: 100%;
+							border-top: 1px solid #313131;
+							.link {
+								display: block;
+								height: 29px;
+								line-height: 29px;
+								font-size: 12px;
+								text-transform: uppercase;
+								opacity: 0.8;
+								padding: 0 0 0 5%;
+								&.active {
+									background-color: rgb(89, 88, 88);
+								}
+							}
+							.sublink {
+								margin: 14px 0 25px 0;
+								width: 100%;
+								display: none;
+								background-color: rgb(89, 88, 88);
+								&.show {
+									display: block;
+									background-color: #1e1d1d;
+								}
+								a {
+									text-decoration: none;
+									outline: none;
+									cursor: pointer;
+									line-height: 20px;
+									height: 20px;
+									padding: 0 0 0 31px;
+									margin: 0 0 7px;
+									font-size: 11px;
+									color: #ffffff;
+									display: block;
+									&:hover {
+										background-color: rgb(89, 88, 88);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sideRightGalleryImage {
+			width: 100%;
+			height: 100%;
+			.galleryContent {
+				position: relative;
+				width: 100%;
+				img {
+					width: 100%;
+					display: block;
+				}
+				.information {
+					background: rgba(0, 0, 0, 0.8);
+					opacity: 1;
+					position: absolute;
+					top: 10px;
+					bottom: 10px;
+					left: 10px;
+					right: 10px;
+					padding: 10px;
+					transition: 0.5 ease-in-out;
+					overflow-y: scroll;
+					.title {
+						color: #ffffff;
+						text-decoration: underline;
+					}
+					.description {
+						line-height: 1.5;
+						font-size: 12px;
+						margin-top: 10px;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}

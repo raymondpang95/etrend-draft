@@ -1,0 +1,257 @@
+@import './src/module/stooges-variables.scss';
+@import './src/scss/project-variables.scss';
+@import './src/module/stooges-mixin.scss';
+@import './src/scss/project-mixin.scss';
+@import './src/module/stooges-basscss.scss';
+@import './src/scss/project-basscss.scss';
+@import './src/scss/fontFamily.scss';
+
+header {
+	@media #{$breakpoint-up-lg} {
+		.headerFixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: white;
+			width: 100%;
+			height: 93px;
+			display: block;
+
+			.headerContent {
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+
+				.logo {
+					margin: 10px 0 0 10px;
+					height: 100%;
+					a {
+						img {
+							width: 100%;
+							height: 100%;
+							display: block;
+						}
+					}
+				}
+
+				.navigationBar {
+					display: flex;
+					width: 100%;
+					justify-content: space-between;
+					margin-left: 5%;
+					.leftNavigationBar {
+						nav {
+							ul {
+								padding: 0;
+								li {
+									display: inline-block;
+									a {
+										display: block;
+										text-transform: uppercase;
+										color: #000000;
+										font-size: 12px;
+										padding: 10px 5px 30px 5px;
+										margin: 25px 20px 0 0;
+										cursor: pointer;
+										height: 20px;
+										&:hover {
+											border-bottom: 3px blue solid;
+										}
+									}
+								}
+							}
+						}
+					}
+					.contactBar {
+						margin-right: 2.5%;
+						nav {
+							ul {
+								padding: 0;
+								li {
+									display: inline-block;
+									a {
+										display: block;
+										text-transform: uppercase;
+										color: #000000;
+										font-size: 12px;
+										padding: 10px 5px 40px 5px;
+										margin: 25px 20px 0 0;
+										cursor: pointer;
+										height: 20px;
+										&:hover {
+											border-bottom: 2px blue solid;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@media #{$breakpoint-only-md} {
+		.headerFixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: white;
+			width: 100%;
+			height: 93px;
+			display: block;
+			.headerContent {
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				.logo {
+					margin: 10px 0 0 10px;
+					height: 100%;
+					a {
+						img {
+							width: 100%;
+							height: 100%;
+							display: block;
+						}
+					}
+				}
+
+				.navigationBar {
+					display: flex;
+					width: 100%;
+					justify-content: space-between;
+					margin-left: 0;
+					.leftNavigationBar {
+						nav {
+							ul {
+								padding: 0;
+								li {
+									display: inline-block;
+									a {
+										display: block;
+										text-transform: uppercase;
+										color: #000000;
+										font-size: 12px;
+										padding: 10px 5px 30px 5px;
+										margin: 25px 20px 0 0;
+										cursor: pointer;
+										height: 20px;
+										&:hover {
+											border-bottom: 2px blue solid;
+										}
+									}
+								}
+							}
+						}
+					}
+					.contactBar {
+						margin-right: 2.5%;
+						nav {
+							ul {
+								padding: 0;
+								li {
+									display: inline-block;
+									a {
+										display: block;
+										text-transform: uppercase;
+										color: #000000;
+										font-size: 12px;
+										padding: 10px 5px 40px 5px;
+										margin: 25px 20px 0 0;
+										cursor: pointer;
+										height: 20px;
+										&:hover {
+											border-bottom: 2px blue solid;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@media #{$breakpoint-down-sm} {
+		.headerFixed {
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: white;
+			width: 100%;
+			height: 93px;
+			display: block;
+
+			.headerContent {
+				width: 100%;
+				.logo {
+					margin-top: 20px;
+					display: flex;
+					justify-content: center;
+					height: 100%;
+					a {
+						img {
+							width: 222px;
+							height: 100%;
+							display: block;
+						}
+					}
+				}
+
+				.navigationBar {
+					display: flex;
+					width: 100%;
+					justify-content: center;
+					.leftNavigationBar {
+						nav {
+							ul {
+								padding: 0;
+								li {
+									display: inline-block;
+
+									a {
+										display: block;
+										text-transform: uppercase;
+										color: #000000;
+										font-size: 12px;
+										margin: 10px 10px 0 0;
+										padding-bottom: 20px;
+										cursor: pointer;
+										height: 20px;
+										&:hover {
+											border-bottom: 2px blue solid;
+										}
+									}
+								}
+							}
+						}
+					}
+					.contactBar {
+						display: none;
+						margin-right: 2.5%;
+						nav {
+							ul {
+								padding: 0;
+								li {
+									display: inline-block;
+									a {
+										display: block;
+										text-transform: uppercase;
+										color: #000000;
+										font-size: 12px;
+										padding: 10px 5px 40px 5px;
+										margin: 25px 20px 0 0;
+										cursor: pointer;
+										height: 20px;
+										&:hover {
+											border-bottom: 2px blue solid;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

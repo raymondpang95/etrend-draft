@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Test 3</title>
+		<link rel="stylesheet" href="test3.css" />
+	</head>
+	<body>
+		<div class="outsideCover">
+			<div class="header">Top Navigation Bar</div>
+
+			<div class="sideLeftBar">
+				<div class="navPageLink">
+					<nav>
+						<ul>
+							<li>
+								<span class="link">Smart Building System</span>
+								<span class="sublink ">
+									<a href="#">VDA</a>
+								</span>
+							</li>
+							<li>
+								<span class="link">VRV Home Central System</span>
+								<span class="sublink ">
+									<a href="#">Daikin Proshop</a>
+								</span>
+							</li>
+							<li>
+								<span class="link">Washroom Solution</span>
+								<span class="sublink ">
+									<a href="#">Conti</a>
+									<a href="#">Justime</a>
+									<a href="#">Tece</a>
+									<a href="#">Global</a>
+									<a href="#">Anello</a>
+									<a href="#">American Standard</a>
+									<a href="#">Econax</a>
+									<a href="#">Saniton</a>
+									<a href="#">Sovereign</a>
+									<a href="#">E' vanity</a>
+								</span>
+							</li>
+							<li>
+								<span class="link">Hot Water System</span>
+								<span class="sublink">
+									<a href="#"> Pecol</a>
+									<a href="#"> Seers</a>
+									<a href="#"> Beebest</a>
+								</span>
+							</li>
+							<li>
+								<span class="link">Solid Surface Countertop</span>
+								<span class="sublink">
+									<a href="#"> Dupont Corian</a>
+									<a href="#"> Arrowfish</a>
+								</span>
+							</li>
+							<li>
+								<span class="link">Others</span>
+								<span class="sublink">
+									<a href="#"> Tern - Security Electrical Fencing System</a>
+									<a href="#"> Viega - Piping System</a>
+									<a href="#"> Vigro - Laminate</a>
+									<a href="#"> Gorenje</a>
+								</span>
+							</li>
+							<li>
+								<span class="link">Sample</span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="sideRightGalleryImage">
+				<div class="row">
+					<div class="lg-col-4 md-col-6 sm-col-12 col-12">
+						<div class="galleryContent">
+							<img src="/1.jpg" />
+							<a class="information">
+								<p class="title">Architectura</p>
+								<p class="description">
+									Villeroy & Boch's Architectura bathroom collection in Malta is a product that exudes
+									timeless elegance in a dsdsadasdasdasd dsad ad sad asad dasd dsad ad sad asad dasd
+									dsad ad sad asadsadsadasbathroom.
+								</p>
+							</a>
+						</div>
+					</div>
+					<div class="lg-col-4 md-col-6 sm-col-12 col-12">
+						<div class="galleryContent">
+							<img src="/1.jpg" />
+							<a class="information">
+								<p class="title">Architectura</p>
+								<p class="description">
+									Villeroy & Boch's Architectura bathroom collection in Malta is a product that exudes
+									timeless elegance in a bathroom.
+								</p>
+							</a>
+						</div>
+					</div>
+					<div class="lg-col-4 md-col-6 sm-col-12 col-12">
+						<div class="galleryContent">
+							<img src="/1.jpg" />
+							<a class="information">
+								<p class="title">Architectura</p>
+								<p class="description">
+									Villeroy & Boch's Architectura bathroom collection in Malta is a product that exudes
+									timeless elegance in a bathroom.
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// 先拿所有的link
+			document.querySelectorAll('.link').forEach(function(elemLink) {
+				// 当link 点击时
+				elemLink.addEventListener('click', function() {
+					// 把所有的link remove class active
+					document.querySelectorAll('.link').forEach(function(elemLink) {
+						elemLink.classList.remove('active');
+					});
+					// 当下点击的link add class active
+					this.classList.add('active');
+
+					// 把所有的sublink remove class show
+					document.querySelectorAll('.sublink').forEach(function(elemSublink) {
+						elemSublink.classList.remove('show');
+					});
+					// 当下点击的link 的 next sibling 添加class show
+					elemLink.nextElementSibling.classList.add('show');
+				});
+			});
+		</script>
+	</body>
+</html>

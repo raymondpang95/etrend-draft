@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="test.css" />
+		<title>testing</title>
+	</head>
+	<body>
+		<div class="navPageLink">
+			<nav>
+				<ul>
+					<li>
+						<span class="link">Smart Building System</span>
+						<span class="sublink ">
+							<a href="#">VDA</a>
+						</span>
+					</li>
+					<li>
+						<span class="link">VRV Home Central System</span>
+						<span class="sublink ">
+							<a href="#">Daikin Proshop</a>
+						</span>
+					</li>
+					<li>
+						<span class="link">Washroom Solution</span>
+						<span class="sublink ">
+							<a href="#">Conti</a>
+							<a href="#">Justime</a>
+							<a href="#">Tece</a>
+							<a href="#">Global</a>
+							<a href="#">Anello</a>
+							<a href="#">American Standard</a>
+							<a href="#">Econax</a>
+							<a href="#">Saniton</a>
+							<a href="#">Sovereign</a>
+							<a href="#">E' vanity</a>
+						</span>
+					</li>
+					<li>
+						<span class="link">Hot Water System</span>
+						<span class="sublink">
+							<a href="#"> Pecol</a>
+							<a href="#"> Seers</a>
+							<a href="#"> Beebest</a>
+						</span>
+					</li>
+					<li>
+						<span class="link">Solid Surface Countertop</span>
+						<span class="sublink">
+							<a href="#"> Dupont Corian</a>
+							<a href="#"> Arrowfish</a>
+						</span>
+					</li>
+
+					<li>
+						<span class="link">Others</span>
+						<span class="sublink">
+							<a href="#"> Tern - Security Electrical Fencing System</a>
+							<a href="#"> Viega - Piping System</a>
+							<a href="#"> Vigro - Laminate</a>
+							<a href="#"> Gorenje</a>
+						</span>
+					</li>
+					<li>
+						<span class="link">Sample</span>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<script>
+			// 先拿所有的link
+			document.querySelectorAll('.link').forEach(function(elemLink) {
+				// 当link 点击时
+				elemLink.addEventListener('click', function() {
+					// 把所有的link remove class active
+					document.querySelectorAll('.link').forEach(function(elemLink) {
+						elemLink.classList.remove('active');
+					});
+					// 当下点击的link add class active
+					this.classList.add('active');
+
+					// 把所有的sublink remove class show
+					document.querySelectorAll('.sublink').forEach(function(elemSublink) {
+						elemSublink.classList.remove('show');
+					});
+					// 当下点击的link 的 next sibling 添加class show
+					elemLink.nextElementSibling.classList.add('show');
+				});
+			});
+
+			// var dropDownBtn = document.getElementsByClassName('link');
+			// var dropDown = document.getElementsByClassName('sublink');
+
+			// for (var i = 0; i < dropDownBtn.length; i++) {
+			// 	dropDownBtn[i].setAttribute('onclick', "showList('" + i + "')");
+			// }
+
+			// function showList(val) {
+			// 	for (var x = 0; x < dropDown.length; x++) {
+			// 		dropDown[x].style.display = 'none';
+			// 		dropDownBtn[x].style.background = '#1e1d1d';
+			// 	}
+			// 	dropDown[val].style.display = 'block';
+			// 	dropDownBtn[val].style.background = 'rgb(89, 88, 88)';
+			// }
+		</script>
+	</body>
+</html>
